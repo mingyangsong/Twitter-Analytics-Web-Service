@@ -1,0 +1,21 @@
+RESTFul (Stargate)
+apt-get install php5-curl
+/etc/init.d/apache2 restart
+
+
+Thrift
+
+
+
+
+Hive + PHP ssh2_exec
+
+sudo apt-get install libssh2-php
+sudo /etc/init.d/apache2 restart
+
+adduser php
+passwd php | php
+
+/etc/ssh/
+sshd_config paws yes
+service ssh restart

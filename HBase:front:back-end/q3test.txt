@@ -1,0 +1,17 @@
+Current count: 332000, row: 0000000000027530696	     1           
+Current count: 333000, row: 0000000000027580828       1                          
+Current count: 334000, row: 0000000000027636972      3                           
+Current count: 335000, row: 0000000000027699824	     1
+
+http://ec2-54-237-67-196.compute-1.amazonaws.com:1339/UserToCount/scanner?column=Count:all&start_row=0000000000027530696&stop_row=0000000000027636972
+
+curl -d '<Scanner STARTROW=>'
+
+
+echo "scan 'UserToCount', {COLUMNS => 'Count:all', STARTROW=>'0000000000027530696', ENDROW=>'0000000000027530825'}" | exec /home/hadoop/bin/hbase shell | awk '/value/ {s+=substr($4,7)} END {print s}'
+
+0000000000027530696
+
+0000000000027530825
+
+awk '/value/ {s+=substr($4,7)} END {print s}'
